@@ -1,0 +1,11 @@
+#This code changes the working directory from the tutorial folder in your FluxEngine installation
+# to a newly created folder in your home drive
+import os;
+import matplotlib.pyplot as plt; #Used later for plotting
+
+workingDirectory = os.path.join("..", "..", "tutorial_02"); #Change this line to change th default location for files you create in this tutorial.
+
+if os.path.exists(workingDirectory) == False: #If the new directory does not already exist, create it
+    os.makedirs(workingDirectory);
+os.chdir(workingDirectory);
+print("Working directory is now:", os.getcwd());
